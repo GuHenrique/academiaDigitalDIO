@@ -5,8 +5,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +27,16 @@ public class Aluno {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @NotNull
   private String nome;
 
+  @NotNull
   @Column(unique = true)
   private String cpf;
 
+  @NotNull
   private String bairro;
-
+  @NotNull
   private LocalDate dataDeNascimento;
 
   @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
