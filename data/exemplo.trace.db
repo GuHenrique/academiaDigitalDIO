@@ -349,3 +349,6 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 57 more
+2023-04-05 21:15:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "TB_AVALIACOES[*]"; expected "TRUNCATE"; SQL statement:
+TB_AVALIACOES [42001-200]

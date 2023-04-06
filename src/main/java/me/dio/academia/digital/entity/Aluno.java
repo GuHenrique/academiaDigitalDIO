@@ -36,6 +36,7 @@ public class Aluno {
 
   @NotNull
   private String bairro;
+
   @NotNull
   private LocalDate dataDeNascimento;
 
